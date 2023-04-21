@@ -1,38 +1,61 @@
-.App {
+:root {
+  --text-size: clamp()
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*, *::before, *::after {
+  margin: 0; padding: 0; box-sizing: inherit;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  background-image: url(../public/images/Screenshot\ 2023-04-21\ at\ 2.56.56\ PM.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed ;
+}
+
+h1 {
+  font-size: clamp(3.8rem, 4vw, 4.2rem);
+  text-align: center;
+  margin-bottom: 20px;
+  color: (187, 19, 19, 0.74);
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.01);
+  -webkit-text-stroke-color: rgba(224, 145, 246, 0.74);
+  -webkit-text-stroke-width: 2px;
+}
+
+li {
+  font-size: var(--text-size);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+li.ant-list-item.done {
+  text-decoration: line-through;
+  color: rgba(128, 128, 128, 0.763);
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+main {
+  width: 89%;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 3%;
+  background-color: rgba(235, 234, 234, 0.808);
+  border-radius: 13px;
+  padding: 15px;
+  border: 5px solid rgba(194, 226, 224, 0.589);
+  filter: drop-shadow(0px 0px 30px rgb(255, 254, 254));
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+button.ant-btn{
+  background-color: purple;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+span.ant-input-affix-wrapper, input.ant-input {
+  background-color: rgb(240, 178, 196);
+  font-size: var(--text-size);
 }
